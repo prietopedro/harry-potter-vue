@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <Home />
-    <Questions v-bind:questions="questions"/>
+    <route-view/>
+    <!-- <Home />
+    <Questions v-bind:questions="questions" v-bind:getTotalPoints="getTotalPoints"/> -->
   </div>
 </template>
 
@@ -15,13 +16,18 @@ export default {
   name: 'app',
   components: {
     Home,
-    Questions,
+    // Questions,
   },
   data(){
     return{
        questions: Data,
        points: 0,
        house: {}
+    }
+  },
+  methods : {
+    getTotalPoints(num){
+      this.points = num
     }
   }
 }

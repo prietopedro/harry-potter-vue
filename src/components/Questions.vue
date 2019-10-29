@@ -4,7 +4,7 @@
             <Question v-bind:question="question" v-bind:updateSelection="updateSeletion"
             v-bind:questionData="questionData" />
         </div>
-        <button>Submit</button>
+        <button v-on:click="onSubmit">Submit</button>
     </div>
 </template>
 
@@ -13,13 +13,21 @@
 import Question from "./Question"
 export default {
     name: "Questions",
-    props: ["questions"],
+    props: ["questions","getTotalPoints"],
     components: {
         Question
     },
     methods: {
         updateSeletion(index,formTotal) {
             this.questionData = {...this.questionData, [index]: formTotal}
+        },
+        onSubmit(e){
+            e.preventDefault();
+            let values = Object.values(this.questionData);
+            let total = values.reduce((total,current)=>{
+            return total + Number(current)
+        },0);
+        this.getTotalPoints(total)
         }
     },
     data(){
