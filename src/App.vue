@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <route-view/>
+    <router-view></router-view>
     <!-- <Home />
     <Questions v-bind:questions="questions" v-bind:getTotalPoints="getTotalPoints"/> -->
   </div>
@@ -15,7 +15,7 @@
 export default {
   name: 'app',
   components: {
-    Home,
+    // Home,
     // Questions,
   },
   data(){

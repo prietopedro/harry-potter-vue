@@ -4,7 +4,8 @@ import VueRouter from "vue-router";
 import Home from "./components/Home";
 import Questions from "./components/Questions"
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
+
 const routes = [
   {path: "/", component: Home},
   {path: "/Questions", component: Questions},
@@ -13,7 +14,7 @@ const routes = [
 const router = new VueRouter({
   routes: routes
 })
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
 
 new Vue({
   router,
