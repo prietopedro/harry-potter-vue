@@ -3,16 +3,20 @@ import App from './App.vue';
 import VueRouter from "vue-router";
 import Home from "./components/Home";
 import Questions from "./components/Questions"
+import House from "./components/House"
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {path: "/", component: Home},
-  {path: "/Questions", component: Questions},
+  {path: "/Questions", component: Questions, props: true},
+  {path: "/House", component: House, props: true}
 ];
 
 const router = new VueRouter({
-  routes: routes
+  routes: routes,
+  mode: "history"
 })
 // Vue.config.productionTip = false
 

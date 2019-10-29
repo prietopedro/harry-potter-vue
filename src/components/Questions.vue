@@ -28,6 +28,7 @@ export default {
             return total + Number(current)
         },0);
         this.getTotalPoints(total)
+        this.$router.push('/House')
         }
     },
     data(){
