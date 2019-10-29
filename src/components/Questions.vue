@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="question in questions" v-bind:key="question.question">
-            <Question />
+            <Question v-bind:question="question"/>
         </div>
         <button>Submit</button>
     </div>

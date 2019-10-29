@@ -1,12 +1,12 @@
 <template>
     <form>
-        <label> Question??
+        <label> {{question.question}}
         <select>
                         <option value="">Please Select One</option>
-                        <option value="1">Hey</option>
-                        <option value="2">Hey</option>
-                        <option value="3">Yo</option>
-                        <option value="4">Yo</option>
+                        <option value="1">{{question.a}}</option>
+                        <option value="2">{{question.b}}</option>
+                        <option value="3">{{question.c}}</option>
+                        <option value="4">{{question.d}}</option>
         </select>
         </label>
     </form>
@@ -14,7 +14,8 @@
 
 <script>
 export default {
-    name: "Question"
+    name: "Question",
+    props: ["question"],
 }
 </script>
 
