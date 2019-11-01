@@ -75,7 +75,7 @@ export default {
       flex-direction: column;
       justify-content: center;
       /* align-items: center; */
-      height: 100vh;
+        min-height: 100vh;
       width: 100%;
       margin: 0 auto;
       background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1539103377911-4909a1eae382?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat center center /cover;
