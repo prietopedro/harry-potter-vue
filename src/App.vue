@@ -13,6 +13,7 @@
   import Questions from "./components/Questions"
 
 
+
 export default {
   name: 'app',
   components: {
@@ -66,5 +67,8 @@ export default {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  body{
+     font-family: 'Henny Penny', cursive;
   }
 </style>
